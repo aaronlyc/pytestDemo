@@ -29,7 +29,6 @@ class TestUserDelete():
     @pytest.mark.single
     @pytest.mark.parametrize("username, except_result, except_code, except_msg",
                              api_data["test_delete_user"])
-    @pytest.mark.usefixtures("insert_delete_user")
     def test_delete_user(self, login_fixture, username, except_result, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         user_info = login_fixture

@@ -69,7 +69,6 @@ class TestRegLogDelete():
     @allure.title("用户注册登录删除-预期失败")
     @pytest.mark.negative
     @pytest.mark.xfail(reason="xfail示例：预期失败的用例，如存在尚未解决的Bug等")
-    @pytest.mark.usefixtures("delete_register_user")
     def test_user_register_login_delete_fail(self, testcase_data):
         username = testcase_data["username"]
         password = testcase_data["password"]
